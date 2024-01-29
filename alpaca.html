@@ -1,1 +1,13 @@
-
+<button onclick="openIframe()">Open Iframe</button> 
+<script> 
+function openIframe() { 
+  var url = prompt("Enter the URL for the iframe:"); 
+  if (url) { 
+    var iframe = document.createElement("iframe"); iframe.src = url; iframe.target = "_blank"; iframe.style = "position: fixed; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; border: none; margin: 0; padding: 0; overflow: hidden; z-index: 9999;"; window.open().document.write(iframe.outerHTML); 
+  } 
+}  
+</script>
+<style>
+  body { background-color: black; } 
+  button { background-color: neon-green; color: black; padding: 10px 20px; border-radius: 5px; font-size: 18px; font-weight: bold; text-align: center; margin: 20px auto; display: block; }
+</style>
